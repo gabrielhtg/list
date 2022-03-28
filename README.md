@@ -32,7 +32,7 @@ Berikut cara menggunakan program ini:
     (lastelmt l)
     ```
     dengan l adalah sebuah list yang akan dicari last elementnya.
-8. Selamat mencoba :stuck_out_tongue_closed_eyes: .
+8. Selamat mencoba :stuck_out_tongue_closed_eyes:.
 
 ## <b>About Me</b>
 
