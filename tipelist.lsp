@@ -1,0 +1,103 @@
+; -----------------------------------------------------------------------------------------------------------------------------
+; NAMA    : GABRIEL CESAR HUTAGALUNG
+; PRODI   : S1 INFORMATIKA
+; -----------------------------------------------------------------------------------------------------------------------------
+; DEFENISI DAN SPESIFIKASI
+
+; Konso {untuk kons bulat kosong }
+; Konso(e,L) : menghasilkan sebuah list dari e dan L, dengan e sebagai element pertama dari list L
+
+; Konsb {untuk kons bulat penuh}
+; Konsb (L e) : menghasilkan sebuah list dari L dan e, dengan e sebagai element terakhir dari list L
+
+; FirstElmt: List of integer tidak kosong → integer
+; {FirstElmt(L) Menghasilkan elemen pertama list L }
+
+; Tail : List of integer tidak kosong → List of integer
+; {Tail(L) : Menghasilkan list tanpa elemen pertama list L }
+
+; LastElmt : List tidak kosong ( L ) ------> elemen ( e )
+; {LastElmt ( L ) Menghasilkan elemen terakhir dari list L }
+
+; Head: List tidak kosong ( L ) -------> elemen ( e )
+; {Head ( L ) Menghasilkan list tanpa elemen terkhir list L } 
+
+; IsEmpty : list -----> boolean
+; {IsEmpty ( L ) benar jika list kosong }
+
+; IsOneElmt : list -----> boolean 
+; {IsOneElmt ( L ) benar jika list L hanya mempunyai satu elemen }
+
+; IsEqual : point --> boolean
+; IsEqual(P1,P2) membuktikan nilai benar jika titik L1 equal dengan L2 adalah titik pusat (0,0).
+
+; Banyaknya elemen 
+; NbElmt(L) menghasilkan banyaknya elemen dari list L
+
+; ElmtKeN : integer >= 0,List -----> elemen 
+; {ElmtKeN ( N, L ) Mengirimkan elemen list yang ke N ,N <=NbElmt(L) dan N >= 0
+
+; Copy
+; Copy (L) menghasilkan salinan dari list L.
+; -----------------------------------------------------------------------------------------------------------------------------
+; REALISASI
+
+(defun Konso(e L)
+	(cons e L)
+)
+
+(defun Konsb (L e)
+	(reverse (cons e (reverse L))
+	) 
+)
+
+(defun Firstchar (L)
+	(car L)
+)
+
+(defun Tail (L)
+	(cdr L)
+)
+
+(defun LastElmt (L) 
+   (car (reverse L))
+)
+
+(defun Head (L) 
+    (reverse (cdr (reverse L))
+	)
+)
+
+(defun IsEmpty (L) 
+    (null L)
+) 	
+
+(defun IsOneElmt (L) 
+   (and (not (isempty L)) (isempty(cdr L))
+   )
+)
+
+(defun IsEqual (L1 L2)
+   (equal L1 L2 )
+)
+
+(defun NbElmt (LS)
+  (cond ((Null LS) 0) 
+		(t (+ 1 (NbElmt (cdr LS))))
+  )
+)
+
+(defun ElmtKeN ( N L )  
+   (cond 
+       ((=n 1)  (FirstElmt (L) ))
+	   (t (ElmtKeN (= n 1 ) (Tail L))) 
+	)
+)
+
+(defun Copy (L)
+	(cond ((IsEmpty L) 0)
+		(t (Konso (FirstElmt L) (Tail L)))
+	)
+)
+
+; -----------------------------------------------------------------------------------------------------------------------------
