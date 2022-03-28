@@ -2,7 +2,7 @@
 
 Ini adalah program yang dibuat dengan bahasa pemrograman LISP untuk bahan pembelajaran Bahasa Pemrograman LISP mengenai list.
 
-# How to use?
+## How to use?
 
 Berikut cara menggunakan program ini:
 1. Buka CLISP.
