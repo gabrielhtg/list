@@ -18,27 +18,6 @@
 
 ; LastElmt : List tidak kosong ( L ) ------> elemen ( e )
 ; {LastElmt ( L ) Menghasilkan elemen terakhir dari list L }
-
-; Head: List tidak kosong ( L ) -------> elemen ( e )
-; {Head ( L ) Menghasilkan list tanpa elemen terkhir list L } 
-
-; IsEmpty : list -----> boolean
-; {IsEmpty ( L ) benar jika list kosong }
-
-; IsOneElmt : list -----> boolean 
-; {IsOneElmt ( L ) benar jika list L hanya mempunyai satu elemen }
-
-; IsEqual : point --> boolean
-; IsEqual(P1,P2) membuktikan nilai benar jika titik L1 equal dengan L2 adalah titik pusat (0,0).
-
-; Banyaknya elemen 
-; NbElmt(L) menghasilkan banyaknya elemen dari list L
-
-; ElmtKeN : integer >= 0,List -----> elemen 
-; {ElmtKeN ( N, L ) Mengirimkan elemen list yang ke N ,N <=NbElmt(L) dan N >= 0
-
-; Copy
-; Copy (L) menghasilkan salinan dari list L.
 ; -----------------------------------------------------------------------------------------------------------------------------
 ; REALISASI
 
@@ -51,7 +30,7 @@
 	) 
 )
 
-(defun Firstchar (L)
+(defun FirstElmt (L)
 	(car L)
 )
 
@@ -62,42 +41,4 @@
 (defun LastElmt (L) 
    (car (reverse L))
 )
-
-(defun Head (L) 
-    (reverse (cdr (reverse L))
-	)
-)
-
-(defun IsEmpty (L) 
-    (null L)
-) 	
-
-(defun IsOneElmt (L) 
-   (and (not (isempty L)) (isempty(cdr L))
-   )
-)
-
-(defun IsEqual (L1 L2)
-   (equal L1 L2 )
-)
-
-(defun NbElmt (LS)
-  (cond ((Null LS) 0) 
-		(t (+ 1 (NbElmt (cdr LS))))
-  )
-)
-
-(defun ElmtKeN ( N L )  
-   (cond 
-       ((=n 1)  (FirstElmt (L) ))
-	   (t (ElmtKeN (= n 1 ) (Tail L))) 
-	)
-)
-
-(defun Copy (L)
-	(cond ((IsEmpty L) 0)
-		(t (Konso (FirstElmt L) (Tail L)))
-	)
-)
-
 ; -----------------------------------------------------------------------------------------------------------------------------
